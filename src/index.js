@@ -13,7 +13,7 @@ const myFileWriter = async (fileName, fileContent) => {
 
 const myFileReader = async (fileName) => {
 	try{
-		await fs.readFile(fileName, function(err, content){
+		await fs.readFile(fileName, 'utf8', function(err, content){
 			console.log(content);
 		})
 	}catch(err){
