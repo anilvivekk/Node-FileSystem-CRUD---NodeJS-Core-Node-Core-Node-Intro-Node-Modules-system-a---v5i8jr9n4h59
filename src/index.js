@@ -2,7 +2,7 @@ const fs = require('fs/promises')
 
 const myFileWriter = async (fileName, fileContent) => {
 	try {
-		await fs.writeFile('fileName', fileContent)
+		await fs.writeFile(fileName, fileContent)
 	}catch (err){
 		console.log(err);
 	}
@@ -12,20 +12,20 @@ const myFileWriter = async (fileName, fileContent) => {
 }
 
 const myFileReader = async (fileName) => {
-	await fs.readFile('fileName')
+	await fs.readFile(fileName)
 	// write code here
 	// dont chnage function name
 }
 
 
 const myFileUpdater = async (fileName, fileContent) => {
-	await fs.appendFile('fileName', fileContent);
+	await fs.appendFile(fileName, fileContent);
 	// write code here
 	// dont chnage function name
 }
 
 const myFileDeleter = async (fileName) => {
-	await fs.rmdir('fileName')
+	await fs.rmdir(fileName)
 	// write code here
 	// dont chnage function name
 }
