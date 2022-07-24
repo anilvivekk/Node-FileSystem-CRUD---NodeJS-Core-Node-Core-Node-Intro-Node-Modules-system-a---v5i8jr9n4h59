@@ -12,7 +12,11 @@ const myFileWriter = async (fileName, fileContent) => {
 }
 
 const myFileReader = async (fileName) => {
-	await fs.readFile(fileName)
+	try{
+		await fs.readFile(fileName)
+	}catch(err){
+		console.log(err)
+	}
 	// write code here
 	// dont chnage function name
 }
@@ -25,7 +29,7 @@ const myFileUpdater = async (fileName, fileContent) => {
 }
 
 const myFileDeleter = async (fileName) => {
-	await fs.rmdir(fileName)
+	await fs.unlink(fileName)
 	// write code here
 	// dont chnage function name
 }
