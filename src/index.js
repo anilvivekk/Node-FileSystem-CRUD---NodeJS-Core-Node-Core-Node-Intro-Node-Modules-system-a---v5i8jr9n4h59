@@ -12,7 +12,9 @@ const myFileWriter = async (fileName, fileContent) => {
 };
 
 const myFileReader = async (fileName) => {
-  fs.readFileSync(fileName);
+	fs.readFile(fileName, (err, data)=>{
+		console.log(data);
+	})
   // write code here
   // dont chnage function name
 };
