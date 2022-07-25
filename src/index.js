@@ -12,16 +12,11 @@ const myFileWriter = async (fileName, fileContent) => {
 };
 
 const myFileReader = async (fileName) => {
-  try {
-    await fs.readFile(fileName, (err, data) => {
-      console.log(data);
-    });
-  } catch (err) {
-    console.log(err);
-  }
+  fs.readFileSync(fileName);
   // write code here
   // dont chnage function name
 };
+
 
 const myFileUpdater = async (fileName, fileContent) => {
   await fs.appendFile(fileName, fileContent);
