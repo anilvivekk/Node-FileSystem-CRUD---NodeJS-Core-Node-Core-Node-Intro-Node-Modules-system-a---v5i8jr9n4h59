@@ -1,4 +1,4 @@
-const fs = require("fs/promises");
+const fs = require('fs');
 
 const myFileWriter = async (fileName, fileContent) => {
   try {
@@ -18,6 +18,7 @@ const myFileReader = async (fileName) => {
   // write code here
   // dont chnage function name
 };
+
 
 
 const myFileUpdater = async (fileName, fileContent) => {
